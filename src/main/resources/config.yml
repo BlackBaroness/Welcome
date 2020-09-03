@@ -1,0 +1,51 @@
+# права: welcome.admin - доступ к /welcome
+#
+# default отключает действия плагина и оставляет сообщения дефолтными.
+#
+# чтобы скрыть сообщения в духе "%nick% зашел в игру"
+#     в графе broadcast.join.enabled выставьте false.
+#       Чтобы вызвать пустую строку, оставьте скобки пустыми.
+#         broadcast.leave работает точно так же.
+#
+#
+# broadcast отвечает за сообщения всему серверу, local - игру лично.
+# тщательно проверьте конфиг перед тем, как сообщить об ошибке.
+#
+# все блоки "message" поддерживают кириллицу, цвета с "&", а также тэги:
+#     {nick} - возвращает никнейм игрока
+#     {online} - возвращает количество игроков онлайн
+#
+# вы можете создавать столько строк, сколько вам нужно.
+#
+# больше плагинов: https://vk.com/baroness_plugins
+
+local:
+  join:
+    enabled: true
+    message:
+      - 'Добро пожаловать на SapphireLife!'
+      - 'Игроки онлайн: {online}'
+
+  death:
+    enabled: true
+    message:
+      - '&aВы погибли.'
+
+broadcast:
+  join:
+    default: false
+    enabled: true
+    message:
+      - '{nick} зашел на сервер'
+
+  leave:
+    default: false
+    enabled: true
+    message:
+      - '{nick} покинул нас...'
+
+  death:
+    default: false
+    enabled: true
+    message:
+      - '{nick} погиб'
