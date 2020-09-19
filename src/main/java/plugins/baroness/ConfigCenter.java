@@ -24,9 +24,7 @@ public class ConfigCenter {
         path = path + ".message";
         List<String> var = cfg.getStringList(path);
         List<String> var1 = new ArrayList<>();
-        var.forEach(message -> {
-            var1.add(message.replace("&", "\u00a7"));
-        });
+        var.forEach(message -> var1.add(message.replace("&", "\u00a7")));
         return var1;
     }
 
