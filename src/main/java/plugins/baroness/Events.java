@@ -58,8 +58,8 @@ public class Events implements Listener {
     @EventHandler
     private void onLeaveGlobal(PlayerQuitEvent e) {
         if (config.isDefault("broadcast.leave")) return;
-        if (config.isEnabled("broadcast.join")) {
-            List<String> var = format("broadcast.join", e.getPlayer());
+        if (config.isEnabled("broadcast.leave")) {
+            List<String> var = format("broadcast.leave", e.getPlayer());
             e.setQuitMessage(var.get(0));
             var.remove(0);
             for (String string : var) {
