@@ -1,9 +1,9 @@
 name: Welcome
-version: 1.5
-main: plugins.baroness.Core
+version: 1.6
+main: ru.baronessdev.welcome.Core
 authors: [Black_Baroness]
 description: Продвинутый менеджер приветствий и прощальных сообщений.
-website: https://vk.com/baroness_plugins
+website: https://vk.com/baroness_dev
 commands:
   welcome:
     usage: /welcome

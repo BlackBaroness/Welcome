@@ -1,6 +1,6 @@
 # права: welcome.admin - доступ к /welcome
 #
-# default отключает действия плагина и оставляет сообщения дефолтными.
+# default отключает действия плагина и оставляет сообщения стандартными.
 #
 # чтобы скрыть сообщения в духе "%nick% зашел в игру"
 #     в графе broadcast.join.enabled выставьте false.
@@ -17,35 +17,38 @@
 #
 # вы можете создавать столько строк, сколько вам нужно.
 #
-# больше плагинов: https://vk.com/baroness_plugins
+# больше плагинов: https://vk.com/baroness_dev
 
 local:
   join:
     enabled: true
     message:
-      - 'Добро пожаловать на SapphireLife!'
-      - 'Игроки онлайн: {online}'
+      - 'Добро пожаловать на &2SapphireLife&f!'
+      - 'Игроки онлайн: &2{online}'
 
   death:
     enabled: true
     message:
-      - '&aВы погибли.'
+      - '&bПомните, что в мире SapphireLife вы бессмертны!'
+      - '&bПосле каждой гибели игрок будет перемещен на ближайшую локацию возрождения.'
+      - '&bСуществуют некоторые штрафные санкции, изменяющиеся в зависимости от локации,'
+      - '&bуровня игрока и типа противника.'
 
 broadcast:
   join:
     default: false
     enabled: true
     message:
-      - '{nick} зашел на сервер'
+      - '&7{nick} присоединился к серверу.'
 
   leave:
     default: false
     enabled: true
     message:
-      - '{nick} покинул нас...'
+      - '&7{nick} покинул сервер.'
 
   death:
     default: false
     enabled: true
     message:
-      - '{nick} погиб'
+      - '&7{nick} умер по неизвестной причине.'

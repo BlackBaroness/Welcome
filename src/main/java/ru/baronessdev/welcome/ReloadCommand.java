@@ -1,4 +1,4 @@
-package plugins.baroness;
+package ru.baronessdev.welcome;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -6,11 +6,11 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class Commands implements CommandExecutor {
+public class ReloadCommand implements CommandExecutor {
 
     private final ConfigCenter center;
 
-    Commands(ConfigCenter center) {
+    ReloadCommand(ConfigCenter center) {
         this.center = center;
     }
 
@@ -19,15 +19,15 @@ public class Commands implements CommandExecutor {
         if (sender instanceof Player) {
             Player p = (Player) sender;
             if (!p.hasPermission("welcome.admin")) {
-                p.sendMessage(ChatColor.AQUA + "[Welcome!] " + ChatColor.RED + "Вы не администратор.");
+                p.sendMessage(ChatColor.GREEN + "[Welcome] " + ChatColor.RED + "Недостаточно прав.");
                 return true;
             }
-            center.loadConfig();
-            p.sendMessage(ChatColor.AQUA + "[Welcome!] " + ChatColor.RED + "Конфиг перезагружен.");
+            center.reload();
+            p.sendMessage(ChatColor.GREEN + "[Welcome] " + ChatColor.WHITE + "Конфиг перезагружен.");
             return true;
         } else {
-            center.loadConfig();
-            System.out.println(ChatColor.AQUA + "[Welcome!] " + ChatColor.WHITE + "Reloaded.");
+            center.reload();
+            Core.log("Reloaded.");
         }
         return true;
     }
