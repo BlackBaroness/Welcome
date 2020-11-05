@@ -1,5 +1,5 @@
 name: Welcome
-version: 1.6
+version: 1.7
 main: ru.baronessdev.welcome.Core
 authors: [Black_Baroness]
 description: Продвинутый менеджер приветствий и прощальных сообщений.
