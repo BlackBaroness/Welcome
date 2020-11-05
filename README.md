@@ -1,1 +1,1 @@
-https://devmc.ru/resources/welcome.6/
+https://baronessdev.ru/welcome
