@@ -1,9 +1,12 @@
 name: Welcome
-version: 1.7
-main: ru.baronessdev.welcome.Core
+version: ${project.version}
+main: ru.baronessdev.free.welcome.Welcome
 authors: [Black_Baroness]
-description: Продвинутый менеджер приветствий и прощальных сообщений.
-website: https://vk.com/baroness_dev
+description: Продвинутый менеджер приветствий, смертей и прощальных сообщений.
+website: baronessdev.ru
+softdepend:
+  - PlaceholderAPI
 commands:
   welcome:
     usage: /welcome
+    permission: welcome.admin

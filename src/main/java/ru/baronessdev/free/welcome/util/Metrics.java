@@ -1,4 +1,4 @@
-package ru.baronessdev.welcome.util;
+package ru.baronessdev.free.welcome.util;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -51,7 +51,7 @@ public class Metrics {
     private static final String URL = "https://bStats.org/submitData/bukkit";
 
     // Is bStats enabled on this server?
-    private boolean enabled;
+    private final boolean enabled;
 
     // Should failed requests be logged?
     private static boolean logFailedRequests;
