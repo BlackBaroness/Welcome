@@ -6,7 +6,7 @@ public class Logger {
 
     public static void log(LogType type, String s) {
         System.out.println(
-                ChatColor.AQUA + "[BaronessEditor] " +
+                ChatColor.GREEN + "[Welcome] " +
                         getPrefix(type) + " " + s
         );
     }
