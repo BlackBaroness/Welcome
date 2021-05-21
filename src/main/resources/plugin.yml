@@ -3,7 +3,7 @@ version: ${project.version}
 main: ru.baronessdev.free.welcome.Welcome
 authors: [Black_Baroness]
 description: Продвинутый менеджер приветствий, смертей и прощальных сообщений.
-website: baronessdev.ru
+website: ${project.url}
 softdepend:
   - PlaceholderAPI
 commands:
