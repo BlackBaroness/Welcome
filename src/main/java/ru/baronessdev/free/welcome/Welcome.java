@@ -2,6 +2,7 @@ package ru.baronessdev.free.welcome;
 
 import lombok.Getter;
 import org.bstats.bukkit.Metrics;
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 import ru.baronessdev.free.welcome.util.UpdateCheckerUtil;
@@ -20,6 +21,7 @@ public final class Welcome extends JavaPlugin {
         instance = this;
 
         getCommand("welcome").setExecutor(new ReloadCommand());
+        Bukkit.getPluginManager().registerEvents(new Handler(), this);
         checkUpdates();
     }
 
